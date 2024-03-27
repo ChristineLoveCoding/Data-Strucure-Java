@@ -1,9 +1,84 @@
 import java.util.*;
 
 public class Arrays {
+    public static int[][] test(int[] test1, int target){
+        if(test1 == null || test1.length == 0){
+            return new int[0][2];
+        }
+        List<int[]> array = new ArrayList<>();
+
+
+        //HashMap 
+        Map<Integer,Integer> map = new HashMap<>();
+        for(int i = 0; i<test1.length;i++){
+            if(test1[i] == 0){
+                throw new ArithmeticException();
+            }
+            int b = target/test1[i];
+            if(map.containsKey(b)){
+                int a = map.get(b);
+                array.add(new int[]{a,i});
+
+            }
+            map.put(test1[i],i);
+        }
+
+        int[][] res = new int[array.size()][2];
+
+        for (int i = 0; i < array.size(); i++) {
+
+            res[i] = array.get(i);
+        }
+
+        return res;
+
+    }
+    //Time : O(n)
+    //Space : O(n)
 
     public static void main(String[] args) {
         System.out.println("Hello Java ! ");
+        int[] s = new int[]{3,5,8,4,6};
+        int[][] a = test(s,24);
+
+        for (int i = 0; i < a.length; i++) {
+            System.out.print("(" + a[i][0] + ", " + a[i][1] + ") ");
+        }
+        System.out.println();
+
+        System.out.println("test is :");
+
+        int test = Integer.bitCount(3);
+       String test2 = Integer.toBinaryString(2);
+        System.out.println(test);
+        System.out.println(test2);
+
+        int[] arr3 = new int[]{4,4,3,5,2};
+        for (int i = 0; i < arr3.length; i++) {
+            System.out.println(Integer.bitCount(arr3[i]));
+        }
+        int[] arr3_test = new int[5+1];
+        for(int i : arr3){
+            arr3_test[i]++;
+        }
+        System.out.println("The test 3 is :");
+        for(int i : arr3_test){
+            System.out.println(i);
+        }
+
+
+
+
+
+
+
+        //{3,5,8,4,6}
+        //[[0,2],[3,4]], i < j
+
+
+
+
+
         // Array
         System.out.println("Array VS ArrayList ");
         List<Integer> arr = new ArrayList<>();
@@ -60,6 +135,11 @@ public class Arrays {
             System.out.println(queue3.poll());
         }
 
+        Queue<Integer> q = new PriorityQueue<>(Collections.reverseOrder());
+        Queue<Integer> q2 = new PriorityQueue<>(Collections.reverseOrder());
+        q.add(23);
+        int s2 = q.size();
+
 
         //TreeMap
         TreeMap<String, Integer> treeMap = new TreeMap<>();
@@ -98,6 +178,9 @@ public class Arrays {
 
 
     }
+
+
+
     //Binary Search Tree
     //Search : O(logN)
     public TreeNode binarySearch(TreeNode root, int num){
