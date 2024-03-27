@@ -1,9 +1,12 @@
 # Data-Strucure-Java
 This is a repository Data Structure (Java Vision) for beginner. 
+
 With this package, you can learn Data Structure from zero.
+
 Easy to read, eay to learn, easy to code. 
 
-#Happy Coding 
+
+Happy Coding 
 
 Prerequisite : 
 1.You are supposed to have a solid foundations of Basic Java langage.
