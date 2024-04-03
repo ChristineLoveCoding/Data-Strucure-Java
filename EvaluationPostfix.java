@@ -11,6 +11,7 @@ public class EvaluationPostfix {
 
         System.out.println("test2 : "+ te2);
         System.out.println("test3 :" + te3);
+        
 
 
     }
@@ -22,7 +23,7 @@ public class EvaluationPostfix {
             if(Character.isDigit(k)){
                 res.append(k);
             }else{
-                while (!st3.isEmpty() && priority(k) < priority(st3.peek()) ){
+                while (!st3.isEmpty() && priority(k) <= priority(st3.peek()) ){
                     char h = st3.pop();
                     res.append(h);
                 }

@@ -12,6 +12,17 @@ public class CohereOA {
         String testS = "011100";
         System.out.println(solution(testS));
 
+        ImplementationQueue2 q1 = new ImplementationQueue2();
+        q1.offer(3);
+        q1.offer(45);
+        q1.offer(78);
+        q1.offer(66);
+        q1.poll();
+        System.out.println(q1.isEmpty());
+        System.out.println(q1.size);
+        System.out.println(q1.peek());
+
+
 
 
     }
