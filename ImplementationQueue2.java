@@ -1,11 +1,13 @@
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Queue;
 
 public class ImplementationQueue2 {
 
     //using linked-list to implement the queue
 
     List<Integer> l2 ;
+
      int size;
 
     ImplementationQueue2(){

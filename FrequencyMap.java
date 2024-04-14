@@ -11,6 +11,9 @@ public class FrequencyMap {
     }
 
     public static void main(String[] args) {
+        char a = 'A';
+        char c = 'C';
+        System.out.println(c-a);
         int[] input =new int[] {-1,6,10,5,7,8};
         System.out.println(longestSub(input));
         System.out.println(longestCon(input));
