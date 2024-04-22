@@ -40,6 +40,7 @@ public class Arrays {
         System.out.println("Hello Java ! ");
         int[] s = new int[]{3,5,8,4,6};
         int[][] a = test(s,24);
+        System.out.println(Integer.toBinaryString(878566754));
 
         for (int i = 0; i < a.length; i++) {
             System.out.print("(" + a[i][0] + ", " + a[i][1] + ") ");
