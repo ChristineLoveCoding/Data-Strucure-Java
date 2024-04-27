@@ -83,5 +83,28 @@ class Test{
 
     }
 
+    ListNode deleteEvenNode(ListNode head){
+        //remove all even value nodes in a linked-list
+        ListNode dummy = new ListNode();
+        dummy.next = head;
+        ListNode current = head;
+        ListNode pre = dummy;
+
+        while (current!= null){
+            if(current.val % 2 ==0){
+                pre.next = current.next; //do not update pre node
+            }else{
+                pre = current; // update pre node
+            }
+
+
+            current = current.next;
+
+        }
+
+        return dummy.next;
+
+    }
+
 
 }
