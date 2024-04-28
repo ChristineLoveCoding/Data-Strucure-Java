@@ -73,7 +73,19 @@ public class BST {
     }
 
 
-    int findHeight(TreeNode root){
+    int findHeight(TreeNode root) {
+        //root to deepest node
+        //height vs depth
+        if(root == null){
+            return -1;
+        }
+
+        int left = findHeight(root.left);
+        int right = findHeight(root.right);
+
+        return Math.max(left,right)+1;
+
+
 
     }
 }
