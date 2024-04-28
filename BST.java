@@ -88,4 +88,20 @@ public class BST {
 
 
     }
+    //DFS : pre,in,post
+    //BFS : stack
+
+    void preorder(TreeNode root ){
+
+        if(root == null){
+            return;
+        }
+        //root-left-right
+        if(root != null){
+            System.out.println(root.val);
+        }
+        preorder(root.left);
+        preorder(root.right);
+
+    }
 }
