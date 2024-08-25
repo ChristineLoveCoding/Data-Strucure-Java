@@ -88,7 +88,7 @@ public class BST {
 
 
     }
-    //DFS : pre,in,post
+    //DFS : pre,in,post (三点假设法)
     //BFS : stack
 
     void preorder(TreeNode root ){
@@ -97,11 +97,23 @@ public class BST {
             return;
         }
         //root-left-right
-        if(root != null){
-            System.out.println(root.val);
-        }
+
+        System.out.println(root.val);
+
         preorder(root.left);
         preorder(root.right);
 
+    }
+
+    void inorder(TreeNode root){
+        if(root.left == null){
+            return;
+        }
+
+
+
+        inorder(root.left);
+        System.out.println(root.val);
+        
     }
 }

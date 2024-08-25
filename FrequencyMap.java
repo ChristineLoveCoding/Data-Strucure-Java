@@ -11,6 +11,8 @@ public class FrequencyMap {
     }
 
     public static void main(String[] args) {
+        int[] ai1 = {1,2,3,4};
+
         char a = 'A';
         char c = 'C';
         System.out.println(c-a);
