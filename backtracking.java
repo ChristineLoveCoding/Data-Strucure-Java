@@ -3,7 +3,7 @@ import java.util.List;
 
 public class backtracking {
     //bk == DFS
-    List< TreeNode> res = new ArrayList<>();
+    List<TreeNode> res = new ArrayList<>();
 
     void preOrder(TreeNode root){
         if(root == null){

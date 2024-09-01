@@ -3,9 +3,6 @@ This is a repository Data Structure (Java Vision) for beginner.
 
 With this package, you can learn Data Structure from zero.
 
-Easy to read, eay to learn, easy to code. 
-
-
 Happy Coding 
 
 Prerequisite : 
